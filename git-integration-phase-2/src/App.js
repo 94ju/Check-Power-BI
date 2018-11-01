@@ -1,25 +1,30 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Api from './APIcalling/apicalling';
+import Chart from './Chart/chart';
 
 class App extends Component {
+  constructor(){
+    super();
+    console.log('This is from constructor');
+  }
+  componentDidCatch(){
+    console.log('This is from componentDidCatch ');
+  }
+  componentWillMount(){
+    console.log("This is from componentwillMount");
+  }
+  componentDidMount(){
+    console.log('This is from componentDidMount')
+  }
+  
   render() {
+    console.log('This is from Render')
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+          <Chart/>
+          <Api/>
+       
+  
       </div>
     );
   }
