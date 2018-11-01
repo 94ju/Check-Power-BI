@@ -6,15 +6,13 @@ class Api extends Component{
         super();
         console.log('This is from Api calling constructor');
     }
-    componentDidCatch(){
-        console.log('This is from componentDidCatch Api');
-      }
-      componentWillMount(){
-        console.log("This is from componentwillMount Api");
-      }
-      componentDidMount(){
+
+   
+      
+    componentDidMount(){
         console.log('This is from componentDidMount Api ')
-      }
+        this.fetchData();
+    }
     render(){
         return(
             <div>
